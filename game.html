@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu 1° Game</title>
+    <style>
+        canvas {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <script>
+          //Váriaveis do game
+          var canvas, ctx, ALTURA, LARGURA, frames = 0;
+
+          function clique () {}  
+          function main() {
+             ALTURA = window.innerHeight;
+             LARGURA = window.innerWidth;
+
+             if (LARGURA >= 500) {
+                 LARGURA = 600;
+                 ALTURA = 600;
+             }
+
+             canvas = documernt.createElement("canvas");
+             canvas.width = LARGURA;
+             canvas.height = ALTURA;
+             canvas.style.border = "1px solid #000";
+
+             ctx = canvas.getContext("2d");
+             document.body.appendChild(canvas);
+             document.addEventListener("mousedown", clique);
+          }
+
+
+        
+          function roda() {}
+          function atualiza () {}
+          function desenha () {}
+          
+          //Iniciando o Jogo
+          main()
+    </script>
+</body>
+</html>
