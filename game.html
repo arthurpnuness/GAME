@@ -108,7 +108,7 @@
                         var obs = this._obs[i];
                         obs.x -= velocidade;
 
-                        if (bloco.x < -obs.x + obs.largura && bloco.x + bloco.largura >= obs.x && bloco.y + bloco.altura >= chao.y - obs.altura) 
+                        if (bloco.x < obs.x + obs.largura && bloco.x + bloco.largura >= obs.x && bloco.y + bloco.altura >= chao.y - obs.altura) 
                             estadoAtual = estados.perdeu;
                         
                         else if (obs.x == 0)
@@ -169,7 +169,8 @@
              document.addEventListener("mousedown", clique);
 
              estadoAtual = estados.jogar;
-             roda()
+
+             roda();
           }
 
           function roda() {
@@ -186,6 +187,9 @@
 
             if (estadoAtual == estados.jogando) 
                 obstaculos.atualiza();
+
+            else if (estadoAtual == estados.perdeu)
+            obstaculos.limpa();  
 
           }
 
