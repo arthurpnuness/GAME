@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="fav/icon.ico" type="image/x-icon">
-    <script scr="sprite.js"></script>
+
     <title>Game</title>
     <style>
         canvas {
@@ -20,7 +20,7 @@
 <body>
     <script>
           //Váriaveis do game
-          var canvas, ctx, ALTURA, LARGURA, frames = 0, maxPulos = 3, velocidade = 6, estadoAtual, record,
+          var canvas, ctx, ALTURA, LARGURA, frames = 0, maxPulos = 3, velocidade = 6, estadoAtual, record, img,
 
             estados = {
                 jogar: 0,
@@ -185,8 +185,7 @@
              if /*condição*/(record == null)
                 record= 0;
 
-            img = new Image();
-            img.scr = "image/sky.png";
+            
 
              roda();
           }
@@ -209,9 +208,9 @@
           }
 
           function desenha() {
-              //ctx.fillStyle = "#50beff";
-              //ctx.fillRect(0, 0, LARGURA, ALTURA);
-              bg.desenha(0, 0);   
+              ctx.fillStyle = "#50beff";
+              ctx.fillRect(0, 0, LARGURA, ALTURA);
+             
 
 
               ctx.fillStyle = "#fff";
